@@ -139,35 +139,39 @@ var qiankaAssert = function(tryerUse,callback){
 		xhr.onreadystatechange = function(){
 
 			if (xhr.readyState == "4") {
-				var resObj = eval('('+ xhr.responseText + ')');
-				console.log(resObj.data)
+				if (xhr.responseText.contains("data")){
+					var resObj = eval('('+ xhr.responseText + ')');
+					console.log(resObj.data)
 
-				if(!resObj.data){
-					setTimeout(backReqest,20000);
-				}
-
-				var singleObj;
-				for(var i = 0;i < resObj.data.length;i++){
-					singleObj = resObj.data[i];
-					console.log("status----"+singleObj.status+"type----"+singleObj.type+"qty----"+singleObj.qty);
-					if(singleObj.status == 1 && singleObj.type == 1 && singleObj.qty > 0){
-						ls++ 
+					if(!resObj.data){
+						setTimeout(backReqest,20000);
 					}
-				}
 
-				if(ls == 0){
-					setTimeout(backReqest,5000)
+					var singleObj;
+					for(var i = 0;i < resObj.data.length;i++){
+						singleObj = resObj.data[i];
+						console.log("status----"+singleObj.status+"type----"+singleObj.type+"qty----"+singleObj.qty);
+						if(singleObj.status == 1 && singleObj.type == 1 && singleObj.qty > 0){
+							ls++ 
+						}
+					}
+
+					if(ls == 0){
+						setTimeout(backReqest,5000)
+					}else{
+						musicAndEmail(ls);
+					}
+					
 				}else{
-					musicAndEmail(ls);
+					callback(tryerUse,ls,0,5000);
 				}
-				
 
 			};
 
 		};
 
 		xhr.onerror = function(){
-			callback(tryerUse,ls,0,5000)
+			callback(tryerUse,ls,0,5000);
 		};
 
 		xhr.send();
