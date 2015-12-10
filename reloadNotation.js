@@ -159,6 +159,7 @@ var qiankaAssert = function(tryerUse,callback){
 					}else{
 						localStorage.hasTask = 0;
 						musicAndEmail(ls);
+						callback(tryerUse,ls,0,500);
 					}
 
 				}else{
