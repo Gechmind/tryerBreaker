@@ -50,9 +50,10 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 							name:"qk_ll",
 							domain:"m.qianka.com",
 							path:"/",
-							value:"eyJpdiI6IjEzZUVxU0FPN01hUXRQUHA2YjZPaUE9PSIsInZhbHVlIjoiMVNLc3hkTmRTUUtTMW5tZ2xKOTJ4QT09IiwibWFjIjoiYzJkY2U5YWIxYzMyYjgxZGVlOGY2MTkzOTEwMmIxYmRiMDM3Y2E4ZjY4OWFjZjkxMTNmMzg2ZTcwZDAyM2VhMiJ9",
+							value:"eyJpdiI6IlZ6azNuTTJOODcrSmhaMmV6bVJcL213PT0iLCJ2YWx1ZSI6IkJWXC9UZkMxWEN3UGhkYjVqSkM2ejJBPT0iLCJtYWMiOiIzMDJiNTExOGMzNzkzYjE2MzYzNzg1NDM0YjNmMDBhMTE3ZWUxYmY4NDQxNmNlMThkMTIwNzhhMzk5ZDk0Nzc1In0%3D",
 							expirationDate:exp
 						});
+
 
 		chrome.cookies.set({url:"http://m.qianka.com/fe/dashboard/index.html",
 							name:"qk_app_id",
@@ -79,9 +80,10 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 							name:"gaoshou_session",
 							domain:"m.qianka.com",
 							path:"/",
-							value:"eyJpdiI6IkMyZ3Y4VnJQWFp4dXVVY1ZoZzdKdmc9PSIsInZhbHVlIjoiUHJmcFh0STlnYXkwRjUzZW5Ic3JPTzZZWG9NRFAxR0VHMXN5VXFSSDdHcUg4S0c5N3plZ0F0ckVrOVRjUjIrMVRWcHdzYVdcL1NCUzMxWjNqV0lHRCtnPT0iLCJtYWMiOiI4ZjYyOTRjNzA1ZWI4ZTU0Y2VmNzA2ZmFjN2IwOTdjMjJkYjA4Y2IxN2Y5NGY1NDE3NTRkODBmZWQ5MDllYzdiIn0%3D",
+							value:"eyJpdiI6IjJVSTNreTlScDAwNHhVOTI3MTNrT3c9PSIsInZhbHVlIjoicWw2XC9jVUtKcW9aYkVQNXpNRzJmWFVTK0VSMThWQ2FtOThKanVzUGY2RHU5eVc3ZTE0dUczajEzTnVTRTRuVERRT1wvNlNMTGIzMWFaUE9qdjh5TFJkZz09IiwibWFjIjoiNzQ0YWFmOGU3YzQ4NGUyNzNlNjg1MjJkNTAyNDc0MDVmNGY2NDFkNGVlOWIxZmY4MzVlNmE1Mjg4MTkyZGEwNSJ9",
 							expirationDate:+exp
 						});
+		
 		chrome.cookies.set({url:"http://m.qianka.com/fe/dashboard/index.html",
 							name:"qk:guid",
 							domain:".qianka.com",

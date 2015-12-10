@@ -573,19 +573,19 @@ function musicAndEmail(ls){
 					
 				});
 
-			    var xhr = new XMLHttpRequest();
+			    // var xhr = new XMLHttpRequest();
 
-		        xhr.open("POST","http://localhost:18080/apptry");
-		        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		     //    xhr.open("POST","http://localhost:18080/apptry");
+		     //    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 
-		        xhr.onreadystatechange = function(){
-		        	if(xhr.readyState == 4){
-		        		var resp = ("(" + xhr.responseText + ")")
-		        		console.log(resp);
-		        	}
-		        }
+		     //    xhr.onreadystatechange = function(){
+		     //    	if(xhr.readyState == 4){
+		     //    		var resp = ("(" + xhr.responseText + ")")
+		     //    		console.log(resp);
+		     //    	}
+		     //    }
 
-		    	xhr.send("pname=" + tryerUse.pname);
+		    	// xhr.send("pname=" + tryerUse.pname);
 			}
 	 }else{
 	//         location.reload();
