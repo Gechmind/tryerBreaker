@@ -109,10 +109,9 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 					name:"JSESSIONID",
 					domain:"itry.com",
 					path:"/",
-					value:"B91382C2C51DB7BF5DCE98A0AB7D3B28",
+					value:"1637D947236CF87D9C3FA781733D0931",
 					expirationDate:+exp
 				});
-
 		sendResponse("it's done")
 	};
 })
