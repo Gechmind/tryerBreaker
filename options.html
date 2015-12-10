@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>轮训设置</title>
+</head>
+<body>
+	<div width="400">
+		<h1 align="center">轮询器设置页面</h1>
+		<div >
+			停止轮训：
+			<select  id="circle" >
+				<option value="0" > 开启轮询(默认)</option>
+				<option value="1" > 关闭轮询</option>
+			</select> 
+		</div>
+		<br>
+		<div>
+			最低轮询间隔: <input type="text" id="normalInterval"/>毫秒
+		</div>
+		<br>
+		<div>
+			开启邮件推送: 
+			<select  id="mailPush" >
+				<option value="0" > 关闭(默认)</option>
+				<option value="1" > 开启</option>
+			</select> 
+		</div>
+		<br>
+		<div>
+			邮件推送地址设置:
+			<input type="text" id="mailAd" placeholder="heisenberg@gmail.com" size="30">
+		</div>
+		<br>
+		<div>
+			提醒音乐是否自动关闭:
+			<select  id="mailPush" >
+				<option value="0" > 自动(默认)</option>
+				<option value="1" > 手动</option>
+			</select> 
+		</div>
+		<br>
+		<div>
+			<input type="button" id="save" value="保存"/>
+		</div>
+	</div>
+	
+			
+		<script src="options.js" charset="utf-8"></script>
+</body>
+</html>

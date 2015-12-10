@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "fuck the  tryer",
+  "description": "Auto get the undo task",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    // "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "cookies",
+    "clipboardRead",
+    "clipboardWrite",
+    "tabs",
+    "*://*/*"
+  ],
+  "background":{
+      // "scripts" : ["background.js"],
+      "page"    : "background.html"
+  },
+  "options_page":"options.html",
+  "content_scripts":[
+    {
+      "matches":["http://itry.com/*","http://r.ow.domob.cn/wx/ui*","http://ow.miidi.net/ow*","http://localhost:18080/itry*","http://m.qianka.com/*"],
+      "js":[
+            "jquery-1.11.3.js",
+            "itry/hackClick.js",
+            "reloadNotation.js"
+          ]
+    }
+  ]
+}
