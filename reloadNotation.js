@@ -128,9 +128,6 @@ var qiankaAssert = function(tryerUse,callback){
 			// title: "江湖Q传（付费）"
 			// type: 1
 
-	var ws = new WebSocket("ws://192.168.0.102:9013");
-
-
 	var xhr = new XMLHttpRequest();
 
 	function backReqest(){
@@ -139,7 +136,8 @@ var qiankaAssert = function(tryerUse,callback){
 		xhr.onreadystatechange = function(){
 
 			if (xhr.readyState == "4") {
-				if (xhr.responseText.contains("data")){
+				var t = xhr.responseText.toString();
+				if (t.indexOf("data") > 0){
 					var resObj = eval('('+ xhr.responseText + ')');
 					console.log(resObj.data)
 
@@ -161,7 +159,7 @@ var qiankaAssert = function(tryerUse,callback){
 					}else{
 						musicAndEmail(ls);
 					}
-					
+
 				}else{
 					callback(tryerUse,ls,0,5000);
 				}

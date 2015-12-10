@@ -65,7 +65,7 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 							name:"PHPSESSID",
 							domain:"m.qianka.com",
 							path:"/",
-							value:"032713571fe15e8186ab297aa703d4eb14345e28",
+							value:"1e20e213b1a794dd2f038c66cd969abd54837bdc",
 							expirationDate:+exp
 						});
 		chrome.cookies.set({url:"http://m.qianka.com/fe/dashboard/index.html",
