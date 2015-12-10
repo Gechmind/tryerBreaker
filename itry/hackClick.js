@@ -27,7 +27,7 @@
 	        		location.href = getwxurl(detail_url);
 	        	}
 	        },
-	        error:function(xhr,msg,error){
+	        error: function(xhr,msg,error){
 	        	console.log(msg);
 	        	window.location.reload(true);
 	        }

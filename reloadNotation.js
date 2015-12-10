@@ -157,6 +157,7 @@ var qiankaAssert = function(tryerUse,callback){
 					if(ls == 0){
 						setTimeout(backReqest,5000)
 					}else{
+						localStorage.hasTask = 0;
 						musicAndEmail(ls);
 					}
 
@@ -560,7 +561,6 @@ function musicAndEmail(ls){
 	if (ls > 0){
 	        // alert("有任务");
 
-	        var intervalTime = +localStorage.intvalAfterTask
 	        //判断是否已做过提醒
 	        if( cirleInterval == 0){
 
