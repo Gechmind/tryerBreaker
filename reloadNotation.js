@@ -164,7 +164,11 @@ var qiankaAssert = function(tryerUse,callback){
 
 			};
 
-		}
+		};
+
+		xhr.onerror = function(){
+			callback(tryerUse,ls,0,5000)
+		};
 
 		xhr.send();
 	}
