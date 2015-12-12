@@ -148,7 +148,7 @@ var qiankaAssert = function(tryerUse,callback){
 					var singleObj;
 					for(var i = 0;i < resObj.data.length;i++){
 						singleObj = resObj.data[i];
-						console.log("status----"+singleObj.status+"type----"+singleObj.type+"qty----"+singleObj.qty);
+						console.log("status----"+singleObj.status+"type----"+singleObj.type+"qty----"+singleObj.qty+"--title--"+singleObj.title);
 						if(singleObj.status == 1 && singleObj.type == 1 && singleObj.qty > 0){
 							ls++ 
 						}
